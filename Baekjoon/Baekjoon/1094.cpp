@@ -7,56 +7,56 @@ using namespace std;
 
 int main() {
 
-	vector <int> v;//나머지
+	vector <double> v;//나머지
 	int x;
-	int sum;
-	int count;
+	double sum;
 	int size;
+	int i = 0;
 
 	x = 0;
-	scanf_s("%d", &x);
+	cin >> x;
 	v.push_back(64);
 	sum = 0;
-	count = 0;
-	
+
 	//sort(v.begin(), v.end());
-	while (1) {
+	while (sum != x) {
 		
+		sum = 0;
 		size = v.size();
-		for (int i = 0; i < size; i++) {
+		for (i = 0; i < size; i++) {
 			sum += v[i];
+			//cout << v[i] << endl;
 		}
+		//cout << "1차 sum" << sum << endl;
 
-	
 		if (sum > x) {
-			v[0]=v[0]/2;
-			v.insert(v.begin()+1, v[0] / 2);
-
-			int ifsum=0;
+			v.insert(v.begin() + 1, v[0] / 2);
+			v[0] = v[0] / 2;
+			
+			double ifsum=0;
 			size = v.size();
 			for (int j = 1; j < size; j++) {
 				ifsum += v[j];
 			}
+			//cout << " ifsum " << ifsum << endl;
 			if (ifsum >= x) {
 				v.erase(v.begin());
 			}
 		}
+
+		sum = 0;
 		size = v.size();
-		for (int i = 0; i < size; i++) {
+		for (i = 0; i < size; i++) {
 			sum += v[i];
 		}
-
-		++count;
-
-		if (count>5) {
-			break;
-		}
-		cout << sum <<endl;
-		cout << count <<endl;
+	
+		//cout << "최종 sum " << sum << endl;
+		
 	}
 
 	
-
+	
+	cout <<v.size() << endl;
 
 }
 
