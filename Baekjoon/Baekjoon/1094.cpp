@@ -3,7 +3,7 @@
 #include<algorithm> 
 #include<iostream>
 using namespace std;
-
+/*
 
 int main() {
 
@@ -59,6 +59,7 @@ int main() {
 	cout <<v.size() << endl;
 
 }
+/*
 
 /*
 지민이는 길이가 64cm인 막대를 가지고 있다. 어느 날, 그는 길이가 Xcm인 막대가 가지고 싶어졌다.

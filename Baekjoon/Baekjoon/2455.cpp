@@ -1,10 +1,43 @@
 #include<stdio.h>
 #include<algorithm>
 #include<vector>
+#include<iostream>
 using namespace std;
 
 
 int main() {
+
+	int best; // 출력값
+	int s[4];// 정거장의 합
+	int in1, in2, in3, in4;
+	int out1, out2, out3, out4;
+	
+	cin >> out1;
+	cin >> in1;
+
+	cin >> out2;
+	cin >> in2;
+
+	cin >> out3;
+	cin >> in3;
+
+	cin >> out4;
+	cin >> in4;
+
+	s[0] = in1 - out1;
+	s[1] = s[0] + in2 - out2;
+	s[2] = s[1] + in3 - out3;
+	s[3] = s[2] + in4 - out4;
+	
+	best = s[0];
+	
+	for (int i = 1; i < sizeof(s)/sizeof(int); i++) {
+
+		if (best < s[i]) {
+			best = s[i];
+		}
+	}
+	cout << best <<endl;
 
 }
 
