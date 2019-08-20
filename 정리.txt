@@ -1,6 +1,7 @@
 ===== Vector ========
 
 선언: vector <int> v;
+추가/삭제: v.push_back(10), pop_back
 
 
 
