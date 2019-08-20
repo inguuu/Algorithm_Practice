@@ -1,5 +1,7 @@
 ===== Vector ========
 
+¼±¾ð: vector <int> v;
+
 
 
 
