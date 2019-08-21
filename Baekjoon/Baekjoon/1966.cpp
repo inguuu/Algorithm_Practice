@@ -4,63 +4,63 @@
 #include<iostream>
 #include<queue>
 using namespace std;
-
-int main(){
-
-	queue<pair<int,int>> imp[100]; //중요도
-	int num;
-	int i;
-	int j;
-	int n[100];
-	int m[100];
-	int inputimp;
-	int value;
-	int idx;
-	int count;
-	priority_queue<int> pq[100];
-	
-
-	cin >> num;
-	for (i = 0; i < num; i++) {
-		cin >> n[i];	
-		cin >> m[i];
-		for (j = 0; j < n[i]; j++) {
-			cin >> inputimp;
-			imp[i].push({ inputimp,j });
-			pq[i].push(inputimp);
-		}
-	}
-
-	for (i = 0; i < num; i++) {
-		count = 1;
-		
-		while (!imp[i].empty()) {
-			if (pq[i].top() > imp[i].front().first) {
-				value = imp[i].front().first;
-				idx = imp[i].front().second;
-				imp[i].pop();
-				imp[i].push({ value,idx });
-			}
-			else if (pq[i].top() == imp[i].front().first) {
-				if (m[i] == imp[i].front().second) {
-					pq[i].pop();
-					imp[i].pop();
-					cout << count << endl;
-					break;
-				}
-				else {
-					pq[i].pop();
-					imp[i].pop();
-					count++;
-				}
-
-			}
-		}
-	
-	}
-
-
-}
+//
+//int main(){
+//
+//	queue<pair<int,int>> imp[100]; //중요도
+//	int num;
+//	int i;
+//	int j;
+//	int n[100];
+//	int m[100];
+//	int inputimp;
+//	int value;
+//	int idx;
+//	int count;
+//	priority_queue<int> pq[100];
+//	
+//
+//	cin >> num;
+//	for (i = 0; i < num; i++) {
+//		cin >> n[i];	
+//		cin >> m[i];
+//		for (j = 0; j < n[i]; j++) {
+//			cin >> inputimp;
+//			imp[i].push({ inputimp,j });
+//			pq[i].push(inputimp);
+//		}
+//	}
+//
+//	for (i = 0; i < num; i++) {
+//		count = 1;
+//		
+//		while (!imp[i].empty()) {
+//			if (pq[i].top() > imp[i].front().first) {
+//				value = imp[i].front().first;
+//				idx = imp[i].front().second;
+//				imp[i].pop();
+//				imp[i].push({ value,idx });
+//			}
+//			else if (pq[i].top() == imp[i].front().first) {
+//				if (m[i] == imp[i].front().second) {
+//					pq[i].pop();
+//					imp[i].pop();
+//					cout << count << endl;
+//					break;
+//				}
+//				else {
+//					pq[i].pop();
+//					imp[i].pop();
+//					count++;
+//				}
+//
+//			}
+//		}
+//	
+//	}
+//
+//
+//}
 
 /*
 
