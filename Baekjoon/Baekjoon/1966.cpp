@@ -7,8 +7,25 @@ using namespace std;
 
 int main(){
 
-	queue<int> q;
-     
+	queue<int> imp; //�߿䵵
+	int num;
+	int i;
+	int j;
+	int n[100];
+	int m[100];
+
+
+
+	cin >> num;
+	for (i = 0; i < num; i++) {
+		cin >> n[i];
+		cin >> m[i];
+		for (j = 0; j < n[i]; j++) {
+
+			imp.push()
+
+		}
+	}
 
 
 }
