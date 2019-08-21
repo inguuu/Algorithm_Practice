@@ -7,29 +7,47 @@ using namespace std;
 
 int main(){
 
-	queue<int> imp[100]; //중요도
+	queue<pair<int,int>> imp[100]; //중요도
 	int num;
 	int i;
 	int j;
 	int n[100];
 	int m[100];
 	int inputimp;
-
-
+	int value;
+	int idx;
+	priority_queue<int> pq;
+	
 
 	cin >> num;
 	for (i = 0; i < num; i++) {
-		cin >> n[i];		cin >> m[i];
+		cin >> n[i];	
+		cin >> m[i];
 		for (j = 0; j < n[i]; j++) {
 			cin >> inputimp;
-			imp[i].push(inputimp);
-
+			imp[i].push({ inputimp,j });
 		}
 	}
 
 	for (i = 0; i < num; i++) {
-		cout << imp[i].front();
+		while (imp[i].empty() == false) {
+			if (pq.top > imp[i].front()) {
+				value= imp[i].front().first;
+				idx = imp[i].front().second;
+				imp[i].pop();
+				imp[i].push({ value,idx });
+			}
+			else if(pq.top==imp[i].front()) {
+				pq.pop();
+				imp[i].pop();
+			}
+		}
+	
 	}
+
+	//for (i = 0; i < num; i++) {
+	//	cout << imp[i].front();
+	//}
 
 }
 

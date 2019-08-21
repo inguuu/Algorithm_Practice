@@ -41,6 +41,7 @@ sizeof(s)/sizeof(int)
 사이즈 q.size() 
 
 
+우선순위 큐를 쓰자 priority_queue<int>pq
 ====================
 
-주석 ctrl k c  해제 ctrl k u
+주석 ctrl k c  해제 ctrl k u 
