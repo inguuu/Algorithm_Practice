@@ -33,3 +33,9 @@ sizeof(s)/sizeof(int)
 
 
 ===== Queue  ========= 
+
+선언: queue<int> q;
+추가/삭제: q.push() q.pop()
+맨앞/뒤 q.front(); q.back();
+빈공간 q.empty() ///true false
+사이즈 q.size() 
