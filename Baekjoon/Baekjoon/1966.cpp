@@ -59,9 +59,6 @@ int main(){
 	
 	}
 
-	//for (i = 0; i < num; i++) {
-	//	cout << imp[i].front();
-	//}
 
 }
 
