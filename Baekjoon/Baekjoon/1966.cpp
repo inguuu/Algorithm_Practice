@@ -7,26 +7,29 @@ using namespace std;
 
 int main(){
 
-	queue<int> imp; //중요도
+	queue<int> imp[100]; //중요도
 	int num;
 	int i;
 	int j;
 	int n[100];
 	int m[100];
+	int inputimp;
 
 
 
 	cin >> num;
 	for (i = 0; i < num; i++) {
-		cin >> n[i];
-		cin >> m[i];
+		cin >> n[i];		cin >> m[i];
 		for (j = 0; j < n[i]; j++) {
-
-			imp.push()
+			cin >> inputimp;
+			imp[i].push(inputimp);
 
 		}
 	}
 
+	for (i = 0; i < num; i++) {
+		cout << imp[i].front();
+	}
 
 }
 
