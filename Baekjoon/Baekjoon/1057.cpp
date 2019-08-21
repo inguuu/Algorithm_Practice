@@ -1,7 +1,8 @@
 #include<stdio.h>
-#include<queue>
+#include<vector>
+#include<algorithm> 
 #include<iostream>
-
+#include<queue>
 using namespace std;
 
 int main() {
@@ -9,17 +10,27 @@ int main() {
 	int n;
 	int a;
 	int b;
-	int i;
-
-	queue<int> q[100];// 라운드 큐
+	int count = 0;
     
 	cin >> n;
 	cin >> a;
 	cin >> b;
-    
-	for (i = 1; i <= n; i++) {
-		m.idx=
-	}
+
+ 
+	while (1) {
+		if (a == b) {
+			break;
+		}
+		
+		
+		a = a / 2 + a % 2;
+		b = b / 2 + b % 2;
+
+		++count;
+
+   }
+	cout << count;
+
 	
 
 }
