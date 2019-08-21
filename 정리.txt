@@ -39,3 +39,8 @@ sizeof(s)/sizeof(int)
 맨앞/뒤 q.front(); q.back();
 빈공간 q.empty() ///true false
 사이즈 q.size() 
+
+
+====================
+
+주석 ctrl k c  해제 ctrl k u
