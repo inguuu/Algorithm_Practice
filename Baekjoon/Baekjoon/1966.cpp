@@ -17,7 +17,7 @@ int main(){
 	int value;
 	int idx;
 	int count;
-	priority_queue<int> pq;
+	priority_queue<int> pq[100];
 	
 
 	cin >> num;
@@ -27,31 +27,33 @@ int main(){
 		for (j = 0; j < n[i]; j++) {
 			cin >> inputimp;
 			imp[i].push({ inputimp,j });
+			pq[i].push(inputimp);
 		}
 	}
 
 	for (i = 0; i < num; i++) {
-		count = 0;
-		while (1) {
-			if (pq.top() > imp[i].front().first) {
-				value= imp[i].front().first;
+		count = 1;
+		
+		while (!imp[i].empty()) {
+			if (pq[i].top() > imp[i].front().first) {
+				value = imp[i].front().first;
 				idx = imp[i].front().second;
 				imp[i].pop();
 				imp[i].push({ value,idx });
 			}
-			else if(pq.top()==imp[i].front().first) {
+			else if (pq[i].top() == imp[i].front().first) {
 				if (m[i] == imp[i].front().second) {
-					pq.pop();
+					pq[i].pop();
 					imp[i].pop();
 					cout << count << endl;
 					break;
 				}
 				else {
-					pq.pop();
+					pq[i].pop();
 					imp[i].pop();
 					count++;
 				}
-			
+
 			}
 		}
 	
@@ -64,6 +66,7 @@ int main(){
 }
 
 /*
+
 여러분도 알다시피 여러분의 프린터 기기는 여러분이 인쇄하고자 하는 문서를 인쇄 명령을 받은 ‘순서대로’, 
 즉 먼저 요청된 것을 먼저 인쇄한다. 여러 개의 문서가 쌓인다면 Queue 자료구조에 쌓여서 FIFO - First In First Out - 
 에 따라 인쇄가 되게 된다. 하지만 상근이는 새로운 프린터기 내부 소프트웨어를 개발하였는데, 이 프린터기는 다음과 같은 조건에 따라 인쇄를 하게 된다.
