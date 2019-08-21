@@ -16,6 +16,7 @@ int main(){
 	int inputimp;
 	int value;
 	int idx;
+	int count;
 	priority_queue<int> pq;
 	
 
@@ -30,16 +31,27 @@ int main(){
 	}
 
 	for (i = 0; i < num; i++) {
-		while (imp[i].empty() == false) {
-			if (pq.top > imp[i].front()) {
+		count = 0;
+		while (1) {
+			if (pq.top() > imp[i].front().first) {
 				value= imp[i].front().first;
 				idx = imp[i].front().second;
 				imp[i].pop();
 				imp[i].push({ value,idx });
 			}
-			else if(pq.top==imp[i].front()) {
-				pq.pop();
-				imp[i].pop();
+			else if(pq.top()==imp[i].front().first) {
+				if (m[i] == imp[i].front().second) {
+					pq.pop();
+					imp[i].pop();
+					cout << count << endl;
+					break;
+				}
+				else {
+					pq.pop();
+					imp[i].pop();
+					count++;
+				}
+			
 			}
 		}
 	
