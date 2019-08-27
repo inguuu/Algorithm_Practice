@@ -7,6 +7,8 @@ using namespace std;
 
 int main() {
 
+
+	
 	int n;
 	int a;
 	int b;
@@ -32,5 +34,4 @@ int main() {
 	cout << count;
 
 	
-
 }
