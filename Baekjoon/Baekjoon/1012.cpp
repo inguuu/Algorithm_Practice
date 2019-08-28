@@ -15,14 +15,10 @@ int main() {
 	int dr[] = { 0,1,0,-1 };
 	int dc[] = { 1,0,-1,0 };
 
-	cin >> t;
-
-
-	for (int i = 0; i < t; i++) {
-
 		cin >> m;
 		cin >> n;
 		cin >> k;
+
 		//초기화
 		for (int j = 0; j < n; j++) {
 			for (int s = 0; s < m; s++) {
@@ -35,7 +31,9 @@ int main() {
 			q.pop();
 		}
 
+		 //넣기
 		for (int j = 0; j < k; j++) {
+			
 			int br;
 			int bc;
 			cin >> br;
@@ -44,34 +42,64 @@ int main() {
 
 		}
 
+		for (int j = 0; j < n; j++) {//맵확인
+			for (int s = 0; s < m; s++) {
+				cout << map[j][s] << " ";
+			}
+			cout << " " << endl;
+		}
+
+
+		//시작
+
+		int num = 0;
+
 		for (int j = 0; j < n; j++) {
 			for (int s = 0; s < m; s++) {
-				if (map[j][s] == 1) {
-					q.push(make_pair(j, s));
+				if (map[j][s] == 1&&visited[j][s]==0) {
+					q.push(make_pair(s, j));
+
+					//bfs
+					while (!q.empty()) {
+						
+						int now_row = q.front().second;
+						int now_col = q.front().first;
+						visited[now_row][now_col] = 1;
+						num++;
+
+						
+						cout << "now " << now_row << "," << now_col  << endl;
+						q.pop();
+
+						for (int j = 0; j < 4; j++) {
+							int nxt_row = now_row + dr[j];
+							int nxt_col = now_col + dc[j];
+
+
+							if (nxt_col < 0 || nxt_row < 0 || nxt_row >= m || nxt_col >= n) continue;
+
+							if (map[nxt_row][nxt_col] == 1 && visited[nxt_row][nxt_col] == 0) {
+								cout << "nxt " << nxt_row << "," << nxt_col   << endl;
+								q.push(make_pair(nxt_col, nxt_row));
+								visited[nxt_row][nxt_col] = 1;
+								
+							}
+
+						}
+
+
+					}
+					cout << endl;
+
+
 				}
 				
 			}
 		}
 
-		while (!q.empty()) {
 
-			int now_row = q.front().first;
-
-		}
-
-
-		////////
-	}
-
-
-
-
-	/*for (int j = 0; j < n; j++) {
-		for (int s = 0; s < m; s++) {
-			cout << map[j][s] << " ";
-		}
-		cout << " " << endl;
-	}*/
+	cout << "num:" << num << endl;
+	cout << "Rmx:"<< endl;
 }
 
 /*
