@@ -65,7 +65,7 @@ int main() {
 						int now_row = q.front().second;
 						int now_col = q.front().first;
 						visited[now_row][now_col] = 1;
-						num++;
+						
 
 						
 						cout << "now " << now_row << "," << now_col  << endl;
@@ -75,21 +75,21 @@ int main() {
 							int nxt_row = now_row + dr[j];
 							int nxt_col = now_col + dc[j];
 
+							if (nxt_col >= 0 && nxt_row >= 0 && nxt_row < n && nxt_col < m) {
 
-							if (nxt_col < 0 || nxt_row < 0 || nxt_row >= m || nxt_col >= n) continue;
-
-							if (map[nxt_row][nxt_col] == 1 && visited[nxt_row][nxt_col] == 0) {
-								cout << "nxt " << nxt_row << "," << nxt_col   << endl;
-								q.push(make_pair(nxt_col, nxt_row));
-								visited[nxt_row][nxt_col] = 1;
+								if (map[nxt_row][nxt_col] == 1 && visited[nxt_row][nxt_col] == 0) {
 								
+									q.push(make_pair(nxt_col, nxt_row));
+									visited[nxt_row][nxt_col] = 1;
+
+								}
 							}
 
 						}
 
 
 					}
-					cout << endl;
+					num++;
 
 
 				}
