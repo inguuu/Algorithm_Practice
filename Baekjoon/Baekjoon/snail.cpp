@@ -57,7 +57,18 @@ int main() {
 	visited[0][0] = 1;
 	while (count < n * n) {
 
+		if (visited[i + di[val]][j + dj[val]] == 0 && i + di[val] >= 0 && j + dj[val] >= 0 && i + di[val] < n && j + dj[val] < n) {
+			i = i + di[val];
+			j = j + dj[val];
+			visited[i][j] = 1;
+			++count;
+			a[i][j] = count;
+
+
+		}
 		
+
+	}
 
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
