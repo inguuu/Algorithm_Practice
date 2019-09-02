@@ -66,7 +66,16 @@ int main() {
 
 
 		}
-		
+		else {
+
+			if (val == 3) {
+				val = 0;
+			}
+			else {
+				++val;
+			}
+
+		}
 
 	}
 
