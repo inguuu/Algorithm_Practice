@@ -1,53 +1,49 @@
 ===== Vector ========
 
-¼±¾ğ: vector <int> v;
-Ãß°¡/»èÁ¦: v.push_back(10), pop_back()//¸¶Áö¸· ¿ø¼Ò ¹ö¸®±â
-Å©±â: v.size
+ì„ ì–¸: vector <int> v;
+ì¶”ê°€/ì‚­ì œ: v.push_back(10), pop_back()//ë§ˆì§€ë§‰ ì›ì†Œ ë²„ë¦¬ê¸°
+í¬ê¸°: v.size
 
-Ã¹/³¡: v.front(), v.back();
-Á¢±Ù: v.at(1);
-ºñ¾ú³ª: v.empty();
-ÃÊ±âÈ­: v.clear();
-
-
-»èÁ¦: v.erase(1), v.erase(1,5)// ¹üÀ§ »èÁ¦
-»ğÀÔ: v.insert(À§Ä¡,value); À§Ä¡´Â iterÀÌ³ª beginµîÀ¸·Î Á¤ÀÇ
-»çÀÌÁî : v.resize(3); ¶Ç´Â v.resize(3,0)//0À¸·Î ÃÊ±âÈ­ ±îÁö 
+ì²«/ë: v.front(), v.back();
+ì ‘ê·¼: v.at(1);
+ë¹„ì—ˆë‚˜: v.empty();
+ì´ˆê¸°í™”: v.clear();
 
 
-
-
+ì‚­ì œ: v.erase(1), v.erase(1,5)// ë²”ìœ„ ì‚­ì œ
+ì‚½ì…: v.insert(ìœ„ì¹˜,value); ìœ„ì¹˜ëŠ” iterì´ë‚˜ beginë“±ìœ¼ë¡œ ì •ì˜
+ì‚¬ì´ì¦ˆ : v.resize(3); ë˜ëŠ” v.resize(3,0)//0ìœ¼ë¡œ ì´ˆê¸°í™” ê¹Œì§€ 
 
 
 
 https://canna90.tistory.com/41
 
-===== ¹è¿­ ======
+===== ë°°ì—´ ======
 
 sizeof(s)/sizeof(int)
 
 
-===== Á¤·Ä =======
-Á¤·Ä: sort(v.begin(), v.end());,sort(s, s+3);
+===== ì •ë ¬ =======
+ì •ë ¬: sort(v.begin(), v.end());,sort(s, s+3);
 
 
 
 ===== Queue  ========= 
 
-¼±¾ğ: queue<int> q; queue<pair<int,int>> q;
-Ãß°¡/»èÁ¦: q.push() q.pop()      q.push({a,b})
-¸Ç¾Õ/µÚ q.front(); q.back();     q.front().first();
-ºó°ø°£ q.empty() ///true false
-»çÀÌÁî q.size() 
+ì„ ì–¸: queue<int> q; queue<pair<int,int>> q;
+ì¶”ê°€/ì‚­ì œ: q.push() q.pop()      q.push({a,b})
+ë§¨ì•/ë’¤ q.front(); q.back();     q.front().first();
+ë¹ˆê³µê°„ q.empty() ///true false
+ì‚¬ì´ì¦ˆ q.size() 
 
 
-¿ì¼±¼øÀ§ Å¥¸¦ ¾²ÀÚ priority_queue<int>pq
+ìš°ì„ ìˆœìœ„ íë¥¼ ì“°ì priority_queue<int>pq
 ====================
 
-ÁÖ¼® ctrl k c  ÇØÁ¦ ctrl k u 
+ì£¼ì„ ctrl k c  í•´ì œ ctrl k u 
 
 
 
 ===========================
-Å×½ºÆ®ÄÉÀÌ½º tÀÇ ¹üÀ§°¡ ÁÖ¾îÁöÁö ¾ÊÀ¸¸é 
-±×³É Æ÷¹®À¸·Î ¸¶Áö¸·¸¸ ¿£ÅÍ·Î ÇÏÀÚ
+í…ŒìŠ¤íŠ¸ì¼€ì´ìŠ¤ tì˜ ë²”ìœ„ê°€ ì£¼ì–´ì§€ì§€ ì•Šìœ¼ë©´ 
+ê·¸ëƒ¥ í¬ë¬¸ìœ¼ë¡œ ë§ˆì§€ë§‰ë§Œ ì—”í„°ë¡œ í•˜ì
