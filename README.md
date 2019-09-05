@@ -1,4 +1,4 @@
-# Baekjoon_Algorithm
+# Algorithm
 
-백준 알고리즘
+알고리즘!!
 
