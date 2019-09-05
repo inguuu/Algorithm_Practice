@@ -16,6 +16,9 @@
     <Filter Include="소스 파일\10">
       <UniqueIdentifier>{51004e18-484e-496a-b4e7-c909beed7a65}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\반복,배열">
+      <UniqueIdentifier>{2854a4e6-2d77-45d6-b7d3-8025002e4081}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="1094.cpp">
@@ -44,6 +47,18 @@
     </ClCompile>
     <ClCompile Include="14502.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="snail.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="star.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="삼각1.cpp">
+      <Filter>소스 파일\반복,배열</Filter>
+    </ClCompile>
+    <ClCompile Include="삼각2.cpp">
+      <Filter>소스 파일\반복,배열</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

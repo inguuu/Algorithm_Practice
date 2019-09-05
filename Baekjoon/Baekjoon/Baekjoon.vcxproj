@@ -152,6 +152,10 @@
     <ClCompile Include="1963.cpp" />
     <ClCompile Include="1966.cpp" />
     <ClCompile Include="2455.cpp" />
+    <ClCompile Include="snail.cpp" />
+    <ClCompile Include="star.cpp" />
+    <ClCompile Include="삼각1.cpp" />
+    <ClCompile Include="삼각2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="1094.h" />
